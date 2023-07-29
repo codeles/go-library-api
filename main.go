@@ -1,6 +1,7 @@
 package main
 
 import (
+	"codeles/library/controllers"
 	"fmt"
 	"html"
 	"log"
@@ -14,7 +15,7 @@ func fooHandler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	fmt.Println("Opening the library...")
 
-	http.HandleFunc("/foo", fooHandler)
+	http.HandleFunc("/books", controllers.BookRouter)
 
 	http.HandleFunc("/bar", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
