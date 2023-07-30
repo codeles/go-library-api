@@ -9,8 +9,8 @@ import (
 )
 
 var (
-	listBooksRe    = regexp.MustCompile(`^\/users[\/]*$`)
-	findBookByIdRe = regexp.MustCompile(`^\/users\/(\d+)$`)
+	listBooksRe    = regexp.MustCompile(`^\/books[\/]*$`)
+	findBookByIdRe = regexp.MustCompile(`^\/books\/(\d+)$`)
 )
 
 // handler for requests for /books/
